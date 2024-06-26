@@ -111,7 +111,7 @@ button:hover {
 }
 
 .skills-section {
-    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(webPic2.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(webPic4.jpg);
 }
 
 .skills-section, .projects-section, .about_section {
@@ -164,7 +164,6 @@ button:hover {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
-    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(webPic4.jpg);
 }
 
 .skills-container img.c-icon {
@@ -358,30 +357,14 @@ footer {
     }
 
     .navbar ul {
-        display: none;
-        position: fixed;
-        top: 80px;
-        left: 0;
-        width: 100%;
-        background-color: #333;
+        font-size: 10px;
         text-align: center;
         z-index: 1000;
-        transform: translateY(-100%);
         transition: transform 0.3s ease-in-out;
     }
 
-    .navbar ul.show {
-        display: block;
-        transform: translateY(0);
-    }
-
-    .navbar ul li {
-        display: block;
-        margin: 10px 0;
-    }
-
     .navbar .menu-icon {
-        display: block;
+        display: inline-block;
         cursor: pointer;
     }
 
@@ -394,16 +377,14 @@ footer {
         font-size: 1.2rem;
     }
 
-    .skills-section h2,
-    .projects-section h2,
-    .about_section h2 {
+    .skills-section h2, .projects-section h2, .about_section h2 {
         font-size: 2rem;
         padding: 15px;
     }
 
-    .skills-container .skills-1,
-    .skills-container .skills-2 {
+    .skills-container .skills-1, .skills-container .skills-2 {
         width: 100%;
+        margin-right: 100px;
     }
 
     .projects-container .project {
@@ -439,16 +420,14 @@ footer {
         font-size: 1rem;
     }
 
-    .skills-section h2,
-    .projects-section h2,
-    .about_section h2 {
+    .skills-section h2, .projects-section h2, .about_section h2 {
         font-size: 1.5rem;
         padding: 10px;
     }
 
-    .skills-container .skills-1,
-    .skills-container .skills-2 {
-        width: 60%;
+    .skills-container .skills-1, .skills-container .skills-2 {
+        width: 100%;
+        margin: 0;
     }
 
     .projects-container .project {
@@ -462,6 +441,28 @@ footer {
     }
 
     .skills-container img.star {
-        width: 30px;
+        width: 50px;
+        margin: 0 auto; /* Center the star */
     }
+}
+
+/* Additional CSS for Flexbox */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skills-container .skills-1, .skills-container .skills-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skills-container li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
 }

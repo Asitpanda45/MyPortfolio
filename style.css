@@ -1,39 +1,45 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
 }
-.banner{
+
+.banner {
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(webPic.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(webPic.jpg);
     background-size: cover;
     background-position: center;
 }
-.navbar{
+
+.navbar {
     width: 95%;
     margin: auto;
-    padding: 35px 0;
+    padding: 20px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.logo{
+
+.logo {
     width: 120px;
     cursor: pointer;
 }
-.navbar ul li{
+
+.navbar ul li {
     list-style: none;
     display: inline-block;
-    margin: 0 20px;
+    margin: 0 10px;
     position: relative;
 }
-.navbar ul li a{
+
+.navbar ul li a {
     text-decoration: none;
     color: aliceblue;
     text-transform: uppercase;
 }
-.navbar ul li::after{
+
+.navbar ul li::after {
     content: '';
     height: 3px;
     width: 0;
@@ -43,10 +49,12 @@
     bottom: -5px;
     transition: 0.5s;
 }
-.navbar ul li:hover:after{
+
+.navbar ul li:hover::after {
     width: 100%;
 }
-.content{
+
+.content {
     width: 100%;
     position: absolute;
     top: 50%;
@@ -54,17 +62,20 @@
     text-align: center;
     color: aliceblue;
 }
-.content h1{
-    font-size: 50px;
+
+.content h1 {
+    font-size: 3rem;
     margin-top: 80px;
 }
-.content p{
+
+.content p {
     font-family: "Playwrite AU VIC", cursive;
     margin: 20px auto;
     font-weight: 100;
-    line-height: 25px;
+    line-height: 1.6;
 }
-button{
+
+button {
     width: 200px;
     padding: 15px 0;
     text-align: center;
@@ -78,7 +89,8 @@ button{
     position: relative;
     overflow: hidden;
 }
-span{
+
+button span {
     background: #009688;
     height: 100%;
     width: 0;
@@ -89,144 +101,138 @@ span{
     z-index: -1;
     transition: 0.5s;
 }
-button:hover span{
+
+button:hover span {
     width: 100%;
 }
-button:hover{
+
+button:hover {
     border: none;
-} 
-.skills-section{
+}
+
+.skills-section {
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(webPic2.jpg);
+}
+
+.skills-section, .projects-section, .about_section {
     width: 100%;
-    height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(webPic4.jpg);
+    min-height: 100vh;
     background-size: cover;
     background-position: center;
     border: 5px solid rgb(69, 85, 80);
     margin: 0;
 }
-.skills-section h2{
+
+.skills-section h2, .projects-section h2, .about_section h2 {
     text-align: center;
     margin-top: 0;
-    font-size: 50px;
-    font-family: "Nabla";
-    color: #6987eab7;
+    font-size: 3rem;
+    font-family: "Nabla", sans-serif;
+    color: rgba(105, 135, 234, 0.72);
     padding: 20px;
 }
-.skills-section hr{
-    margin: 20px 500px;
+
+.skills-section hr, .about_section hr {
+    margin: 20px auto;
+    width: 80%;
+    max-width: 500px;
     height: 1.2px;
     border: 0;
-    background-color:  #6987eab7;
+    background-color: rgba(105, 135, 234, 0.72);
 }
+
 .skills-container {
     display: flex;
-    justify-content: space-around; 
-    align-items: flex-start; 
+    justify-content: space-around;
+    align-items: flex-start;
     flex-wrap: wrap;
 }
-.skills-1, .skills-2 {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; 
+
+.skills-container .skills-1, .skills-container .skills-2 {
+    width: 45%;
+    margin-bottom: 30px;
 }
 
-.skills-1 ul, .skills-2 ul {
+.skills-container ul {
     list-style-type: none;
-    line-height: 1.5; 
-}
-.skills-section ul{
-    color: #009688;
-    font-size: 2rem;
-    text-align: center;
+    font-size: 1.6rem;
     line-height: 2;
+    text-align: center;
 }
-.c-icon {
-    width: 160px;
-    height: auto; 
-    margin: 20px;
-    padding-right: 20px;
-    
-}
-.cpp-icon{
-    width: 180px;
-    height: auto;
-    margin-top: 25px;
-    margin-right: 20px;
-}
-.python-icon{
-    width: 80px;
-    height: auto;
-    margin-top: 70px;
-    margin-bottom: 50px; 
-    padding-right: 60px;
-    padding-left: 40px;
-  
-}
-.sql-icon{
-    width: 130px;
-    height: auto;
-    margin-top: 30px;
-    padding-right: 35px;
-}
-.oop-icon{
-    width: 130px;
-    height: auto;
-    margin-top: 40px;
-    padding-right: 35px;
-}
-.dsa-icon{
-    width: 150px;
-    height: auto;
-    margin-top: 20px;
-    padding-right: 20px;
-}
-
 
 .skills-container li {
     display: flex;
     align-items: center;
-    margin-right: 50px;
-    margin-bottom: 30px; 
+    margin-bottom: 20px;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(webPic4.jpg);
 }
-.python-icon,.star{
-    margin-left: 20px;
+
+.skills-container img.c-icon {
+    width: 200px;
+    height: auto;
+    background: transparent;
+    margin-right: 0;
+    margin-left: 50px;
+    padding-right: 30px;
 }
-.skills-container img.c-icon,
-.skills-container img.cpp-icon,
-.skills-container img.python-icon{
-    margin-right: 10px; 
-    margin-left: 0px;
+
+.skills-container img.cpp-icon {
+    width: 200px;
+    height: auto;
+    background: transparent;
+    margin-top: 90px;
+    margin-bottom: 60px;
+    margin-right: 0;
+    margin-left: 50px;
+    padding-right: 30px;
 }
-.skills-container img.sql-icon,
-.skills-container img.oop-icon,
-.skills-container img.dsa-icon{
-    margin-left: 10px;
+
+.skills-container img.python-icon {
+    width: 90px;
+    height: auto;
+    background: transparent;
+    margin-right: 60px;
+    margin-left: 100px;
+    padding-right: 30px;
+}
+
+.skills-container img.sql-icon {
+    width: 150px;
+    height: auto;
+    background: transparent;
+    margin-right: 0;
+    margin-left: 100px;
+    padding-right: 30px;
+}
+
+.skills-container img.oop-icon {
+    width: 130px;
+    height: auto;
+    background: transparent;
+    margin-top: 80px;
+    margin-bottom: 40px;
+    margin-right: 10px;
+    margin-left: 110px;
+    padding-right: 30px;
+}
+
+.skills-container img.dsa-icon {
+    width: 180px;
+    height: auto;
+    background: transparent;
+    margin-right: 0;
+    margin-left: 70px;
+    padding-right: 30px;
 }
 
 .skills-container img.star {
-    margin-right: 2px;
-    width: 60px;
+    width: 80px;
     height: auto;
+    margin-right: 10px;
 }
-
 
 .projects-section {
-    width: 100%;
-    height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(webPic2.jpg);
-    background-size: cover;
-    background-position: center;
-    border: 5px solid rgb(69, 85, 80);
-    margin: 0;
-}
-
-.projects-section h2 {
-    text-align: center;
-    margin-top: 0;
-    font-size: 50px;
-    font-family: "Nabla";
-    color: #23395d;
-    padding: 45px;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(webPic2.jpg);
 }
 
 .projects-container {
@@ -237,14 +243,13 @@ button:hover{
 }
 
 .project {
+    width: 45%;
+    max-width: 400px;
+    margin: 10px;
     background-color: #15202b;
-    background: transparent;
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 400px;
-    margin: 10px;
-    text-align: center;
     overflow: hidden;
 }
 
@@ -255,93 +260,64 @@ button:hover{
 }
 
 .project h3 {
+    text-align: center;
+    font-size: 1.5rem;
     margin: 10px 0;
-    font-size: 1.5em;
-    color:  #5bbabf;
+    color: #5bbabf;
 }
 
 .project p {
-    
     font-family: "Playwrite NG Modern", cursive;
-    font-optical-sizing: auto;
-    font-style: normal;
+    font-size: 1.2rem;
     font-weight: bold;
     padding: 0 20px 5px;
     color: aliceblue;
 }
+
 .about_section {
-    width: 100%;
-    height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(webPic3.jpg);
-    background-size: cover;
-    background-position: center;
-    border: 5px solid rgb(69, 85, 80);
-    margin: 0;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(webPic3.jpg);
 }
-.about_section h2{
-    color: rgb(69, 155, 164);
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 2.5rem;
-    margin: 40px;
-}
-.about_box{
+
+.about_box {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-   }
-.about_section hr{
-    margin: 20px 500px;
-    height: 1.2px;
-    border: 0;
-    background-color:  rgb(69, 155, 164);
-}
-.about_box p{
-    display: block; 
-    justify-content: space-around;
-    background-color: #1d1c3e;
-    border: 3px solid #6d7476;
-    background: transparent;
-    border-radius: 10px; 
-    width: 950px;
     padding: 20px;
-    margin: 10px;
-    text-align: justify; 
-    overflow: hidden;
+}
+
+.about_box p {
+    font-family: "Roboto Mono", monospace;
     font-size: 1.5rem;
     line-height: 2;
-    font-family: "Roboto Mono", monospace;
-    font-optical-sizing: auto;
-    font-weight: 100;
-    font-style: oblique;
     color: #fff;
+    background: transparent;
+    border: 3px solid #6d7476;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    text-align: justify;
 }
+
 footer {
     width: 100%;
-    height: 250px;
     padding: 20px 0;
     background-color: #040c1b;
     text-align: center;
     color: rgb(186, 210, 233);
     position: relative;
     bottom: 0;
-    border:  3px solid #6d7476;;
+    border-top: 3px solid #6d7476;
 }
-.footer-content .logo{
-    display: grid;
-    margin-right: 50px;
-}
+
 .footer-content {
     max-width: 1200px;
     margin: auto;
-    margin-bottom: 30px;
 }
 
 .footer-content p {
-    margin: 10px 0;
     font-family: "Playwrite AU VIC", cursive;
+    margin: 10px 0;
 }
 
 .social-icons {
@@ -353,6 +329,7 @@ footer {
     text-decoration: none;
     color: aliceblue;
 }
+
 .social-icons img {
     width: 30px;
     height: 30px;
@@ -364,7 +341,127 @@ footer {
 .social-icons img:hover {
     transform: scale(1.2);
 }
-.footer-bottom{
-    margin: 0;
+
+@media only screen and (max-width: 1200px) {
+    .skills-container .skills-1, .skills-container .skills-2 {
+        width: 100%;
+    }
+
+    .projects-container .project {
+        width: 100%;
+    }
 }
 
+@media only screen and (max-width: 768px) {
+    .navbar {
+        padding: 10px 0;
+    }
+
+    .navbar ul {
+        display: none;
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        text-align: center;
+        z-index: 1000;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .navbar ul.show {
+        display: block;
+        transform: translateY(0);
+    }
+
+    .navbar ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .navbar .menu-icon {
+        display: block;
+        cursor: pointer;
+    }
+
+    .content h1 {
+        font-size: 2.5rem;
+        margin-top: 60px;
+    }
+
+    .content p {
+        font-size: 1.2rem;
+    }
+
+    .skills-section h2,
+    .projects-section h2,
+    .about_section h2 {
+        font-size: 2rem;
+        padding: 15px;
+    }
+
+    .skills-container .skills-1,
+    .skills-container .skills-2 {
+        width: 100%;
+    }
+
+    .projects-container .project {
+        width: 100%;
+    }
+
+    .about_box p {
+        font-size: 1.2rem;
+        padding: 15px;
+        width: 100%;
+    }
+
+    .skills-container img.star {
+        width: 60px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .logo {
+        width: 100px;
+    }
+
+    .navbar ul {
+        top: 60px;
+    }
+
+    .content h1 {
+        font-size: 2rem;
+        margin-top: 40px;
+    }
+
+    .content p {
+        font-size: 1rem;
+    }
+
+    .skills-section h2,
+    .projects-section h2,
+    .about_section h2 {
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+
+    .skills-container .skills-1,
+    .skills-container .skills-2 {
+        width: 100%;
+    }
+
+    .projects-container .project {
+        width: 100%;
+    }
+
+    .about_box p {
+        font-size: 1rem;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .skills-container img.star {
+        width: 50px;
+    }
+}
